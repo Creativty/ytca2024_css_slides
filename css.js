@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 	const showcase = document.getElementById("showcase");
-	document.addEventListener("keypress", (event) => {
-		if (event.code === "Enter" && showcase)
-			showcase.classList.add("active");
+	document.getElementById("checkbox_activator")?.addEventListener("change", (event) => {
+		if (event.target.checked) showcase.classList.add("active");
+		else showcase.classList.remove("active")
 	});
 });

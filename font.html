@@ -9,14 +9,21 @@
 				align-items: center;
 				justify-content: center;
 			}
-			section#showcase.active p {
-				/* font-size: 24px; */
-				color: red; 
+			section#showcase.active p.invert {
+				color: var(--cl-keyword);
+			}
+			section#showcase.active p#big {
+				font-size: 32px;
+			}
+			section#showcase.active p#medium {
+				font-size: 24px;
+			}
+			section#showcase.active p#small {
+				font-size: 12px;
 			}
 		</style>
 	</head>
 	<body>
-		<!-- add comment about putting style tags in html file -->
 		<code class="small">
 			<span class="keyword">&lthead&gt</span>
 				<div class="indent">
@@ -26,7 +33,9 @@
 			<br />
 			<span class="keyword">&ltbody&gt</span>
 				<div class="indent">
-					<span style="color: var(--cl-keyword)">&ltp&gt</span>Hello world<span style="color: var(--cl-keyword)">&lt/p&gt</span>
+					<span style="color: var(--cl-keyword)">&ltp id="big"&gt</span>Big<span style="color: var(--cl-keyword)">&lt/p&gt</span> <br />
+					<span style="color: var(--cl-keyword)">&ltp id="medium" class="invert"&gt</span>Medium<span style="color: var(--cl-keyword)">&lt/p&gt</span> <br />
+					<span style="color: var(--cl-keyword)">&ltp id="small" class="invert"&gt</span>Small<span style="color: var(--cl-keyword)">&lt/p&gt</span> <br />
 				</div>
 			<span class="keyword">&lt/body&gt</span>
 			<hr />
@@ -35,10 +44,30 @@
 			</div>
 		</code>
 		<code>
-			<span><span class="keyword">p</span> {<br /></span>
+			<span><span class="keyword">p.invert</span> {<br /></span>
 			<div class="indent">
-				<!--<span class="rule"><span class="property">font-size</span>24px</span>-->
-				<span class="rule"><span class="property">color</span>red</span>
+				<span class="rule"><span class="property">color</span>#939185</span>
+				<span class="comment">/* Colors can be described using hexadecimal */</span>
+				<span class="comment">/* or using rgb(red, green, blue) */</span>
+				<span class="comment">/* and others... */</span>
+			</div>
+			}<br />
+			<br />
+			<span><span class="keyword">p#big</span> {<br /></span>
+			<div class="indent">
+				<span class="rule"><span class="property">font-size</span>32px</span>
+			</div>
+			}<br />
+			<br />
+			<span><span class="keyword">p#medium</span> {<br /></span>
+			<div class="indent">
+				<span class="rule"><span class="property">font-size</span>24px</span>
+			</div>
+			}<br />
+			<br />
+			<span><span class="keyword">p#small</span> {<br /></span>
+			<div class="indent">
+				<span class="rule"><span class="property">font-size</span>12px</span>
 			</div>
 			}<br />
 			<hr />
@@ -51,17 +80,22 @@
 			</div>
 		</code>
 		<section id="showcase">
-			<p>Hello world</p>
+			<div>
+				<p id="big">Big</p>
+				<p id="medium" class="invert">Medium</p>
+				<p id="small" class="invert">Small</p>
+			</div>
 		</section>
-		<a class="navigation prev" href="css.html">
+		<a class="navigation prev" href="basic.html">
 			<svg  xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 1024 1024" fill="currentColor" stroke="currentColor">
 				<path d="M869 487.8L491.2 159.9c-2.9-2.5-6.6-3.9-10.5-3.9h-88.5c-7.4 0-10.8 9.2-5.2 14l350.2 304H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h585.1L386.9 854c-5.6 4.9-2.2 14 5.2 14h91.5c1.9 0 3.8-.7 5.2-2L869 536.2a32.07 32.07 0 0 0 0-48.4z"/>
 			</svg>
 		</a>
-		<a class="navigation next" href="font.html">
+		<a class="navigation next" href="background.html">
 			<svg  xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 1024 1024" fill="currentColor" stroke="currentColor">
 				<path d="M869 487.8L491.2 159.9c-2.9-2.5-6.6-3.9-10.5-3.9h-88.5c-7.4 0-10.8 9.2-5.2 14l350.2 304H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h585.1L386.9 854c-5.6 4.9-2.2 14 5.2 14h91.5c1.9 0 3.8-.7 5.2-2L869 536.2a32.07 32.07 0 0 0 0-48.4z"/>
 			</svg>
 		</a>
+		<p style="display: none;" id="style_text"></p>
 	</body>
 </html>

@@ -9,14 +9,27 @@
 				align-items: center;
 				justify-content: center;
 			}
-			section#showcase.active p {
-				/* font-size: 24px; */
-				color: red; 
+			section#showcase #outer {
+				border: 1px solid black;
+			}
+			section#showcase.active #outer {
+				padding: 12.5px;
+			}
+			section#showcase #inner {
+				width: 25px;
+				height: 25px;
+				background-color: yellow;
+			}
+			section#showcase.active p#color {
+				color: white;
+				background-color: black;
+			}
+			section#showcase.active p#image {
+				background-image: url("paper.gif");
 			}
 		</style>
 	</head>
 	<body>
-		<!-- add comment about putting style tags in html file -->
 		<code class="small">
 			<span class="keyword">&lthead&gt</span>
 				<div class="indent">
@@ -26,7 +39,12 @@
 			<br />
 			<span class="keyword">&ltbody&gt</span>
 				<div class="indent">
-					<span style="color: var(--cl-keyword)">&ltp&gt</span>Hello world<span style="color: var(--cl-keyword)">&lt/p&gt</span>
+					<span style="color: var(--cl-keyword)">&ltdiv id="outer"&gt</span> <br />
+					<div class="indent">
+						<span style="color: var(--cl-keyword)">&ltdiv id="inner"&gt</span>
+						<span style="color: var(--cl-keyword)">&lt/div&gt</span> <br />
+					</div>
+					<span style="color: var(--cl-keyword)">&lt/div&gt</span> <br />
 				</div>
 			<span class="keyword">&lt/body&gt</span>
 			<hr />
@@ -35,10 +53,18 @@
 			</div>
 		</code>
 		<code>
-			<span><span class="keyword">p</span> {<br /></span>
+			<span><span class="keyword">div#outer</span> {<br /></span>
 			<div class="indent">
-				<!--<span class="rule"><span class="property">font-size</span>24px</span>-->
-				<span class="rule"><span class="property">color</span>red</span>
+				<span class="rule"><span class="property">border</span>1px solid black</span>
+				<span class="rule"><span class="property">padding</span>12.5px</span>
+			</div>
+			}<br />
+			<br />
+			<span><span class="keyword">div#inner</span> {<br /></span>
+			<div class="indent">
+				<span class="rule"><span class="property">width</span>50px</span>
+				<span class="rule"><span class="property">height</span>50px</span>
+				<span class="rule"><span class="property" style="color: black; font-weight: normal;">background-color</span>yellow</span>
 			</div>
 			}<br />
 			<hr />
@@ -51,17 +77,13 @@
 			</div>
 		</code>
 		<section id="showcase">
-			<p>Hello world</p>
+			<div id="outer"><div id="inner"></div></div>
 		</section>
-		<a class="navigation prev" href="css.html">
+		<a class="navigation prev" href="background.html">
 			<svg  xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 1024 1024" fill="currentColor" stroke="currentColor">
 				<path d="M869 487.8L491.2 159.9c-2.9-2.5-6.6-3.9-10.5-3.9h-88.5c-7.4 0-10.8 9.2-5.2 14l350.2 304H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h585.1L386.9 854c-5.6 4.9-2.2 14 5.2 14h91.5c1.9 0 3.8-.7 5.2-2L869 536.2a32.07 32.07 0 0 0 0-48.4z"/>
 			</svg>
 		</a>
-		<a class="navigation next" href="font.html">
-			<svg  xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 1024 1024" fill="currentColor" stroke="currentColor">
-				<path d="M869 487.8L491.2 159.9c-2.9-2.5-6.6-3.9-10.5-3.9h-88.5c-7.4 0-10.8 9.2-5.2 14l350.2 304H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h585.1L386.9 854c-5.6 4.9-2.2 14 5.2 14h91.5c1.9 0 3.8-.7 5.2-2L869 536.2a32.07 32.07 0 0 0 0-48.4z"/>
-			</svg>
-		</a>
+		<p style="display: none;" id="style_text"></p>
 	</body>
 </html>
