@@ -10,20 +10,37 @@
 				justify-content: center;
 			}
 			section#showcase.active p {
-				font-size: 24px;
+				/* font-size: 24px; */
 				color: red; 
 			}
 		</style>
 	</head>
 	<body>
 		<!-- add comment about putting style tags in html file -->
+		<code class="small">
+			<span class="keyword">&lthead&gt</span>
+				<div class="indent">
+					<span style="color: var(--cl-keyword)">&ltlink</span> rel=<span style="color: var(--cl-property); font-weight: bold;">"stylesheet"</span> href=<span style="color: var(--cl-property); font-weight: bold;">"style.css"</span> <span style="color: var(--cl-keyword)">/&gt</span>
+				</div>
+			<span class="keyword">&lt/head&gt</span>
+			<br />
+			<span class="keyword">&ltbody&gt</span>
+				<div class="indent">
+					<span style="color: var(--cl-keyword)">&ltp&gt</span>Hello world<span style="color: var(--cl-keyword)">&lt/p&gt</span>
+				</div>
+			<span class="keyword">&lt/body&gt</span>
+			<hr />
+			<label>index.html</label>
+		</code>
 		<code>
 			<span><span class="keyword">p</span> {<br /></span>
 			<div class="indent">
-				<span class="rule"><span class="property">font-size</span>24px</span>
+				<!--<span class="rule"><span class="property">font-size</span>24px</span>-->
 				<span class="rule"><span class="property">color</span>red</span>
 			</div>
 			}<br />
+			<hr />
+			<label>style.css</label>
 		</code>
 		<section id="showcase">
 			<p>Hello world</p>
